@@ -3,6 +3,8 @@ package jeugladiateurs;
 import personnages.Personnage;
 import combat.CompteurDeTour;
 import combat.AffichageEcran;
+import personnages.Mirmillon;
+
 
 public class JeuGladiateurs {
 
@@ -14,14 +16,14 @@ public class JeuGladiateurs {
     // <editor-fold defaultstate="expanded" desc="Instanciation des objets">
     CompteurDeTour tour = new CompteurDeTour();
     AffichageEcran affichage = new AffichageEcran();
-    Personnage Bob = new Personnage("Bob le malchanceux", 15, 15, 70, 15);
+    Personnage Bob = new Mirmillon("Bob le malchanceux", 15, 15, 70, 15);
     Personnage Igor = new Personnage("Igor l'empaleur", 25, 5, 100, 30);
     // </editor-fold>
 
     // **************************************************************************
     // **************************************************************************
     // **************************************************************************
-    // <editor-fold defaultstate="collapsed" desc="Affichage prÃ©-combat">
+    // <editor-fold defaultstate="collapsed" desc="Affichage pré-combat">
     Bob.afficherInfosPersonnage();
     Igor.afficherInfosPersonnage();
     affichage.afficherDebutCombat();
@@ -32,7 +34,7 @@ public class JeuGladiateurs {
     // **************************************************************************
     // **************************************************************************
     // **************************************************************************
-    // <editor-fold defaultstate="collapsed" desc="MÃ©canique de combat">
+    // <editor-fold defaultstate="collapsed" desc="Mécanique de combat">
     while ((Bob.getPointsDeVie() != 0) && (Igor.getPointsDeVie() != 0)) {
         tour.afficheTour();
         for (int i = 0; i <= 100; i++) {
@@ -54,8 +56,8 @@ public class JeuGladiateurs {
     }
     affichage.afficheVictoire(Bob, Igor);
     
-    // TODO : La boucle contenant les Ã©tapes du combat
-    // TODO : AprÃ¨s la boucle, afficher le rÃ©sultat du combat
+    // TODO : La boucle contenant les étapes du combat
+    // TODO : Après la boucle, afficher le résultat du combat
     // </editor-fold>
     }
 
