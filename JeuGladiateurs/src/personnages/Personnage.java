@@ -39,10 +39,10 @@ public class Personnage {
     // **************************************************************************
     // **************************************************************************
     // <editor-fold defaultstate="collapsed" desc="Getters et setters">
-    public String getNom() {    
+    public String getNom() {
         return nom;
     }
-    
+
     public int getPointsDeVie() {
         return pointsDeVie;
     }
@@ -59,10 +59,7 @@ public class Personnage {
         return initiative;
     }
 
-    
-
     //Setters 
-
     public void setNom(String nom) {
         this.nom = nom;
     }
@@ -70,7 +67,7 @@ public class Personnage {
     public void setPointsDeVie(int pointsDeVie) {
         this.pointsDeVie = pointsDeVie;
     }
-    
+
     public void setValeurMaxAttaque(int valeurMaxAttaque) {
         this.valeurMaxAttaque = valeurMaxAttaque;
     }
@@ -78,7 +75,7 @@ public class Personnage {
     public void setValeurDefense(int valeurDefense) {
         this.valeurDefense = valeurDefense;
     }
-    
+
     public void setInitiative(int initiative) {
         this.initiative = initiative;
     }
@@ -87,23 +84,22 @@ public class Personnage {
     // **************************************************************************
     // **************************************************************************
     // **************************************************************************
-    // <editor-fold defaultstate="collapsed" desc="MÃ©canique de jeu">
+    // <editor-fold defaultstate="collapsed" desc="Mécanique de jeu">
     public void afficherInfosPersonnage() {
         System.out.println();
         System.out.println(this.getNom());
         System.out.println("\t Attaque : " + this.getValeurMaxAttaque());
-        System.out.println("\t DÃ©fense : " + this.getValeurDefense());
+        System.out.println("\t Défense : " + this.getValeurDefense());
         System.out.println("\t Points de vie : " + this.getPointsDeVie());
         System.out.println("\t Initiative : " + this.getInitiative());
         System.out.println("\t Statut : " + this.estVivant());
     }
-    
+
     public String estVivant() {
         String statut;
         if (this.getPointsDeVie() > 0) {
             statut = "Vivant";
-        }
-        else {
+        } else {
             statut = "Mort";
         }
         return statut;
@@ -114,7 +110,7 @@ public class Personnage {
         int degatsAttaque = rand.nextInt(this.getValeurMaxAttaque() - 0);
         return degatsAttaque;
         // TODO : Retourner la valeur de l'attaque du personnage.
-        // Cette valeur est trouvÃ©e alÃ©atoirement et doit se situer entre ZÃ‰RO et valeurMaxAttaque.
+        // Cette valeur est trouvée aléatoirement et doit se situer entre ZÉRO et valeurMaxAttaque.
     }
 
     public void frapperPersonnage(Personnage personnageCible) {
@@ -128,15 +124,15 @@ public class Personnage {
         if (personnageCible.getPointsDeVie() < 0) {
             personnageCible.setPointsDeVie(0);
         }
-        
+
         System.out.println();
         System.out.println(this.getNom() + " attaque avec une puissance de : " + forceDeFrappe);
-        System.out.println(personnageCible.getNom() + " a une dÃ©fense de : " + valeurDefense);
+        System.out.println(personnageCible.getNom() + " a une défense de : " + valeurDefense);
         System.out.println("Les dommages sont donc de : " + dommages);
-        
-        // TODO : RÃ©cupÃ©rer la valeur d'attaque pour ce tour, calculer les dÃ©gats,
-        //modifier les points de vie du personnage cible, afficher les dÃ©tails
-        // sur l'attaque, tel que montrÃ© dans l'Ã©noncÃ©.
+
+        // TODO : Récupérer la valeur d'attaque pour ce tour, calculer les dégats,
+        //modifier les points de vie du personnage cible, afficher les détails
+        // sur l'attaque, tel que montré dans l'énoncé.
     }
 
     public void setNewInitiativeRandom() {

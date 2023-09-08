@@ -8,7 +8,7 @@ public class CompteurDeTour {
     // <editor-fold defaultstate="collapsed" desc="Attributs">
     int cptrTour;
     // </editor-fold>
-    
+
     // **************************************************************************
     // **************************************************************************
     // **************************************************************************
@@ -22,7 +22,7 @@ public class CompteurDeTour {
     // **************************************************************************
     // **************************************************************************
     // <editor-fold defaultstate="collapsed" desc="Getters et setters">
-    public int getCptrTour() {    
+    public int getCptrTour() {
         return cptrTour;
     }
 
@@ -30,12 +30,11 @@ public class CompteurDeTour {
         this.cptrTour = cptrTour;
     }
 
-    
     // </editor-fold>
     // **************************************************************************
     // **************************************************************************
     // **************************************************************************
-    // <editor-fold defaultstate="collapsed" desc="MÃ©canique de jeu">
+    // <editor-fold defaultstate="collapsed" desc="Mécanique de jeu">
     public void augmenteTour() {
         this.cptrTour++;
     }

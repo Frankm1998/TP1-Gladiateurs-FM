@@ -10,23 +10,26 @@ import java.util.Random;
  *
  * @author 201530970
  */
-public class Mirmillon extends Personnage {
+public class Retiaire extends Personnage {
 
     //*******************************************************************************
     // <editor-fold desc="ATTRIBUTS">
+    boolean possedeFilet;
     String classe;
 
     // </editor-fold>
     //*******************************************************************************
     // <editor-fold defaultstate="collapsed" desc="CONSTRUCTEURS et INITIALISATION">
-    public Mirmillon(String nom, int attaqueMax, int defense, int pvs, int ini) {
+    public Retiaire(String nom, int attaqueMax, int defense, int pvs, int ini) {
         super(nom, attaqueMax, defense, pvs, ini);
-        this.classe = "Mirmillon";
+        this.possedeFilet = true;
+        this.classe = "Retiaire";
     }
 
-    public Mirmillon() {
+    public Retiaire() {
         super();
-        this.classe = "Mirmillon";
+        this.possedeFilet = true;
+        this.classe = "Retiaire";
     }
 
     // </editor-fold>
@@ -34,15 +37,22 @@ public class Mirmillon extends Personnage {
     // <editor-fold desc="MÉTHODES">
     @Override
     public void frapperPersonnage(Personnage personnageCible) {
-        super.frapperPersonnage(personnageCible);
         System.out.println();
-        if (personnageCible.getPointsDeVie() == 0) {
-            System.out.println(this.getNom() + " décapite son adversaire !!!");
+        if (this.possedeFilet) {
+            System.out.println(this.getNom() + " lance son filet");
+        }
+        Random rand = new Random();
+        if (rand.nextInt(100 - 0) >= 90 && this.possedeFilet) {
+            personnageCible.setPointsDeVie(0);
+            System.out.println("Son filet attrape " + personnageCible.getNom() + " et il l'empale sauvagement avec sa lance");
+        } else if (this.possedeFilet) {
+            this.possedeFilet = false;
+            System.out.println("Le filet n'atteint pas sa cible");
         } else {
-            System.out.println(this.getNom() + " attaque de nouveau !!!");
+            System.out.println(this.getNom() + " ramasse son filet et en profite pour attaquer");
+            this.possedeFilet = true;
             super.frapperPersonnage(personnageCible);
         }
-
     }
 
     @Override
@@ -51,13 +61,7 @@ public class Mirmillon extends Personnage {
         System.out.println("Classe : " + this.classe);
     }
 
-    @Override
-    public void setNewInitiativeRandom() {
-        Random rand = new Random();
-        this.setInitiative(rand.nextInt(30 - 0));
-    }
     // </editor-fold>
-
     //*******************************************************************************
     // <editor-fold defaultstate="collapsed" desc="GETTERS et SETTERS">
     // </editor-fold>

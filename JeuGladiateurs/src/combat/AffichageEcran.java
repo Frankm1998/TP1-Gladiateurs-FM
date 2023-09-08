@@ -7,14 +7,14 @@ public class AffichageEcran {
     // **************************************************************************
     // **************************************************************************
     // **************************************************************************
-    // <editor-fold defaultstate="collapsed" desc="MÃ©thodes d'affichage">
+    // <editor-fold defaultstate="collapsed" desc="Méthodes d'affichage">
     public void afficherDebutCombat() {
         System.out.println();
         System.out.println("<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>");
         System.out.println(">>>>> Que le combat commence ! <<<<<");
         System.out.println("<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>");
     }
-    
+
     public void afficherSeparateurDeTour() {
         System.out.println();
         System.out.println("**************************************");
@@ -32,7 +32,7 @@ public class AffichageEcran {
             System.out.println();
             System.out.println(personnage2.getNom() + " gagne le combat !!!");
         }
-        
+
         if (personnage2.getPointsDeVie() == 0) {
             System.out.println();
             System.out.println(personnage1.getNom() + " gagne le combat !!!");
