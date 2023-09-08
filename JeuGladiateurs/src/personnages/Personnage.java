@@ -93,7 +93,6 @@ public class Personnage {
         System.out.println("\t Points de vie : " + this.getPointsDeVie());
         System.out.println("\t Initiative");
         System.out.println("\t Statut : " + this.estVivant());
-        System.out.println();
     }
     
     public String estVivant() {

@@ -13,7 +13,6 @@ public class AffichageEcran {
         System.out.println("<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>");
         System.out.println(">>>>> Que le combat commence ! <<<<<");
         System.out.println("<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>");
-        System.out.println();
     }
     
     public void afficherSeparateurDeTour() {
