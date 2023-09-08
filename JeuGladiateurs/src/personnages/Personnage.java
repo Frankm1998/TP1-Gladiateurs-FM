@@ -94,7 +94,7 @@ public class Personnage {
         System.out.println("\t Attaque : " + this.getValeurMaxAttaque());
         System.out.println("\t Défense : " + this.getValeurDefense());
         System.out.println("\t Points de vie : " + this.getPointsDeVie());
-        System.out.println("\t Initiative");
+        System.out.println("\t Initiative : " + this.getInitiative());
         System.out.println("\t Statut : " + this.estVivant());
     }
     
@@ -118,6 +118,22 @@ public class Personnage {
     }
 
     public void frapperPersonnage(Personnage personnageCible) {
+        int forceDeFrappe = this.attaqueCalcul();
+        int valeurDefense = personnageCible.getValeurDefense();
+        int dommages = forceDeFrappe - valeurDefense;
+        if (dommages < 0) {
+            dommages = 0;
+        }
+        personnageCible.setPointsDeVie((personnageCible.getPointsDeVie() - dommages));
+        if (personnageCible.getPointsDeVie() < 0) {
+            personnageCible.setPointsDeVie(0);
+        }
+        
+        System.out.println();
+        System.out.println(this.getNom() + " attaque avec une puissance de : " + forceDeFrappe);
+        System.out.println(personnageCible.getNom() + " a une défense de : " + valeurDefense);
+        System.out.println("Les dommages sont donc de : " + dommages);
+        
         // TODO : Récupérer la valeur d'attaque pour ce tour, calculer les dégats,
         //modifier les points de vie du personnage cible, afficher les détails
         // sur l'attaque, tel que montré dans l'énoncé.

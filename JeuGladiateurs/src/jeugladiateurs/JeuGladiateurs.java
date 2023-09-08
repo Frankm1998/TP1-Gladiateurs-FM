@@ -15,7 +15,7 @@ public class JeuGladiateurs {
     CompteurDeTour tour = new CompteurDeTour();
     AffichageEcran affichage = new AffichageEcran();
     Personnage Bob = new Personnage("Bob le malchanceux", 15, 15, 70, 15);
-    Personnage Igor = new Personnage("Igor l'empaleur", 25, 25, 100, 30);
+    Personnage Igor = new Personnage("Igor l'empaleur", 25, 5, 100, 30);
     // </editor-fold>
 
     // **************************************************************************
@@ -26,7 +26,11 @@ public class JeuGladiateurs {
     Igor.afficherInfosPersonnage();
     affichage.afficherDebutCombat();
     
-    
+    Bob.frapperPersonnage(Igor);
+    Bob.frapperPersonnage(Igor);
+    System.out.println();
+    Igor.frapperPersonnage(Bob);
+    Igor.frapperPersonnage(Bob);
     // </editor-fold>
 
     // **************************************************************************
