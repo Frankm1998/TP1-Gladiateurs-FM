@@ -26,11 +26,13 @@ public class JeuGladiateurs {
     Igor.afficherInfosPersonnage();
     affichage.afficherDebutCombat();
     
-    Bob.frapperPersonnage(Igor);
-    Bob.frapperPersonnage(Igor);
+    Bob.afficherInfosPersonnage();
+    Bob.setNewInitiativeRandom();
+    Bob.afficherInfosPersonnage();
     System.out.println();
-    Igor.frapperPersonnage(Bob);
-    Igor.frapperPersonnage(Bob);
+    Igor.afficherInfosPersonnage();
+    Igor.setNewInitiativeRandom();
+    Igor.afficherInfosPersonnage();
     // </editor-fold>
 
     // **************************************************************************
