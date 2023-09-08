@@ -52,7 +52,7 @@ public class JeuGladiateurs {
         affichage.afficherSeparateurDeTour();
         tour.augmenteTour();
     }
-   // affichage.afficheVictoire(Bob, Igor);
+    affichage.afficheVictoire(Bob, Igor);
     
     // TODO : La boucle contenant les étapes du combat
     // TODO : Après la boucle, afficher le résultat du combat

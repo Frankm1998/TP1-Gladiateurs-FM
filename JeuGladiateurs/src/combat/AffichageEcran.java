@@ -28,15 +28,15 @@ public class AffichageEcran {
     }
 
     public void afficheVictoire(Personnage personnage1, Personnage personnage2) {
-//        if (personnage1.getPointsDeVie() == 0) {
-//            System.out.println();
-//            System.out.println(personnage2.getNom() + " gagne le combat !!!");
-//        }
-//        
-//        if (personnage2.getPointsDeVie() == 0) {
-//            System.out.println();
-//            System.out.println(personnage1.getNom() + " gagne le combat !!!");
-//        }
+        if (personnage1.getPointsDeVie() == 0) {
+            System.out.println();
+            System.out.println(personnage2.getNom() + " gagne le combat !!!");
+        }
+        
+        if (personnage2.getPointsDeVie() == 0) {
+            System.out.println();
+            System.out.println(personnage1.getNom() + " gagne le combat !!!");
+        }
     }
     // </editor-fold>
 }
