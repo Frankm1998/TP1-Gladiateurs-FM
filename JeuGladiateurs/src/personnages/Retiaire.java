@@ -58,7 +58,7 @@ public class Retiaire extends Personnage {
     @Override
     public void afficherInfosPersonnage() {
         super.afficherInfosPersonnage();
-        System.out.println("Classe : " + this.classe);
+        System.out.println("\t Classe : " + this.classe);
     }
 
     // </editor-fold>

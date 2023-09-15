@@ -48,7 +48,7 @@ public class Mirmillon extends Personnage {
     @Override
     public void afficherInfosPersonnage() {
         super.afficherInfosPersonnage();
-        System.out.println("Classe : " + this.classe);
+        System.out.println("\t Classe : " + this.classe);
     }
 
     @Override

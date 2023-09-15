@@ -109,8 +109,7 @@ public class Personnage {
         Random rand = new Random();
         int degatsAttaque = rand.nextInt(this.getValeurMaxAttaque() - 0);
         return degatsAttaque;
-        // TODO : Retourner la valeur de l'attaque du personnage.
-        // Cette valeur est trouvée aléatoirement et doit se situer entre ZÉRO et valeurMaxAttaque.
+        
     }
 
     public void frapperPersonnage(Personnage personnageCible) {
@@ -130,9 +129,6 @@ public class Personnage {
         System.out.println(personnageCible.getNom() + " a une défense de : " + valeurDefense);
         System.out.println("Les dommages sont donc de : " + dommages);
 
-        // TODO : Récupérer la valeur d'attaque pour ce tour, calculer les dégats,
-        //modifier les points de vie du personnage cible, afficher les détails
-        // sur l'attaque, tel que montré dans l'énoncé.
     }
 
     public void setNewInitiativeRandom() {
